@@ -1,12 +1,25 @@
-# Getting Started with Create React App
+# Department Hub
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Project Aim
 
-In the project directory, you can run:
+Department Hub is a web application designed to centralize and streamline administrative tasks of university or college department. The primary goal is to create a single platform for assigning classes, managing students, and providing important notices. This improves the communication within each department and organizes the tasks.
 
-### `npm start`
+## Tech Stack
+
+## Frontend:
+    - React.js: A robust JavaScript library for building user interface.
+    - Redux: Managing application global state with state container.
+    - Tailwind CSS - A utility-first CSS framework for responsive UI development.
+
+# Steps
+1. Clone the repository:
+` git clone (https://github.com/)[your-username]/department-hub.git
+cd department-hub`
+
+2. Install frontend dependencies:
+`cd client\src
+ npm run dev`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -17,7 +30,7 @@ You may also see any lint errors in the console.
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
 
 ### `npm run build`
 
@@ -27,44 +40,22 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Install backend dependencies
+`cd server/src
+npm install
+node server.js`
 
-### `npm run eject`
+## License
+This project is licensed under the MIT license. 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Acknowledgements
+Contributor - Dhara Pandya
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Further Actions
+- correct ui mismatch for login page
+- connect backend with frontend(display notices, user login/logout)
+- configure database with env file(mongodb uri, jwt token)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Screenshots
+![LOGIN PAGE](<Screenshot (34).png>)
+![Role Selection Page](<Screenshot (33).png>)
