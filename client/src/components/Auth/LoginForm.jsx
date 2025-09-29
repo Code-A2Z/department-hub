@@ -3,7 +3,7 @@ import {useNavigate,Link} from "react-router-dom";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
 import * as z from "zod";
-import {Eye, EyeOff, ArrowLeft} from "lucide-react";
+import {EyeOff, Eye} from "lucide-react";
 
 import {Button} from "../ui/button";
 import {Input} from "../ui/input";
@@ -70,24 +70,24 @@ export function LoginForm({role}){
         }
     };
     return(
-        <div className="flex min-h-screen flex-col items-center justify-center bg-background p-4">
-           <Card className=" rounded-xl shadow-lg  w-full max-w-md">
-            <CardHeader className="text-center p-12">
-                <Button variant="ghost" size="icon" className="absolute left-4 top-4 text-muted-foreground" asChild>
+        <div className="flex min-h-screen flex-col items-center justify-center bg-gray p-4">
+           <Card className=" rounded-xl border shadow-lg  w-full max-w-sm bg-white">
+            <CardHeader className="text-center p-8 relative">
+                {/* <Button variant="ghost" size="icon" className="absolute left-4 top-4 text-gray-500 hover:text-gray-900" asChild>
                     <Link to="/">
-                    <ArrowLeft className="h4 w-4"/>
+                    <ArrowLeft className="h5 w-5"/>
                     </Link>
-                </Button>
-                <CardTitle className="text-3xl font-bold mb-2">
-                    {role.charAt(0).toUpperCase()+role.slice(1)} Login
+                </Button> */}
+                <CardTitle className="text-3xl font-normal text-gray-900 mb-2">
+                    Student Login
                 </CardTitle>
-                <CardDescription className="text-lg text-muted-foreground">
+                <CardDescription className="text-lg text-gray-700 font-normal mt-1">
                     Welcome back! Please enter your details
                 </CardDescription>
             </CardHeader>
-           <CardContent className="px-12 pb-12">
+           <CardContent className="px-8 pb-8 pt-4">
             <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
                     {role==="student" &&(
                         <>
                         <FormField
@@ -96,8 +96,9 @@ export function LoginForm({role}){
                             render={({field})=>(
                                 <FormItem>
                                     <FormControl>
-                                        <Input placeholder="Enter your Roll Number *" {...field}
-                                        className="h-14 text-lg "/>
+                                        <Input placeholder="Enter your Roll Number *" 
+                                        {...field}
+                                        className="h-10 text-base border-0 border-b border-gray-400 focus-visible:ring-0 focus-visible:border-blue-500 placeholder-black/80"/>
                                         </FormControl>
                                         <FormMessage/>
                                         </FormItem>
@@ -110,7 +111,7 @@ export function LoginForm({role}){
                                 <FormItem>
                                     <FormControl>
                                         <Input placeholder="Enter your Name *" {...field}
-                                        className="h-14 text-lg"/>
+                                        className="h-10 text-base border-0 border-b border-gray-400 focus-visible:ring-0 focus-visible:border-blue-500 placeholder-black/80"/>
                                         </FormControl>
                                         <FormMessage/>
                                         </FormItem>
@@ -126,8 +127,10 @@ export function LoginForm({role}){
                                 <FormItem>
                                     <FormControl>
                                         <Input type="email" placeholder="Enter your email *"
-                                        {...field} className="h-14 text-lg "/>
+                                        {...field} 
+                                        className="h-10 text-base border-0 border-b border-gray-400 focus-visible:ring-0 focus-visible:border-blue-500 placeholder-black/80 "/>
                                     </FormControl>
+                                    <FormMessage/>
                                 </FormItem>
                             )}
                             />
@@ -140,57 +143,62 @@ export function LoginForm({role}){
                                     <div className="relative">
                                     <FormControl>
                                         <Input 
-                                        type={showPassword?"text":"password"} 
+                                        type="password"
                                         placeholder="Password *"
                                         {...field} 
-                                        className="h-14 text-lg pr-12"/>
+                                        className="h-10 text-base border-0 border-b border-gray-400 focus-visible:ring-0 focus-visible:border-blue-500 pr-10 placeholder-black/80"/>
                                     </FormControl>
                                     <Button
                                         type="button"
                                         variant="ghost"
                                         size="icon"
-                                        className="absolute right-1 top-1/2 h-8 w-8 -translate-y-1/2 text-muted-foreground hover:bg-transparent"
+                                        className="absolute right-0 top-1/2 h-8 w-8 -translate-y-1/2 text-gray-500 hover:bg-transparent"
                                         onClick={()=> setShowPassword((prev)=>! prev)}
                                             aria-label="Toggle password visibility"
                                         >
                                         {showPassword?(
-                                            <EyeOff className="h-6 w-6"/>
+                                            <EyeOff className="h-5 w-5"/>
                                         ): (
-                                            <Eye className="h-6 w-6"/>
+                                            <Eye className="h-5 w-5"/>
                     
                                         )}
 
                                     </Button>
-                                
                                  </div>
                                  <FormMessage/>
                                  </FormItem>
                             )}
                             />
-                        <div className="flex items-center justify-between">
+                        <div className="flex items-center justify-between pt-2">
                             <FormField
                                 control={form.control}
                                 name="remember"
                                 render={({field})=>(
-                                    <FormItem className="flex flex-row item-center space-x-2 space-y-0">
+                                    <FormItem className="flex items-center space-x-2 space-y-0">
                                         <FormControl>
                                             <Checkbox
                                             id="remember"
                                             checked={field.value}
                                             onCheckedChange={field.onChange}
+                                            className="h-4 w-4 rounded-none border-gray-400 data-[state=checked]:bg-purple-600 data-[state=checked]:text-white"
                                             />
                                         </FormControl>
-                                        <Label htmlFor="remember" className="text-lg text-muted-foreground font-normal cursor-pointer">
+                                        <Label htmlFor="remember" className="text-sm text-gray-700 font-normal cursor-pointer">
                                             Remember me
                                         </Label>
                                     </FormItem>
                                 )}
                                 />
-                                <Link to="#" className="text-sm font-medium text-primary hover:underline">
+                                <Link to="#" className="text-base font-medium text-primary hover:underline">
                                     Forgot password?
                                 </Link>
+                                
                         </div>
-                        <Button type="submit" className="w-full text-lg font-semibold h-14" size="lg" variant="default">
+                        <Button 
+                        type="submit" 
+                        className="w-full text-lg font-normal h-12 " 
+                        size="lg" 
+                        variant="default">
                             LOGIN
                         </Button>
                 </form>

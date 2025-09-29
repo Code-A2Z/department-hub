@@ -1,0 +1,63 @@
+department-hub/
+|── client/
+|   |── public/
+|   |── src/
+│   │   ├── assets/
+│   │   ├── components/ 
+│   │   |   ├──Auth/
+│   │   |   |  |──LoginForm.jsx
+│   │   |   |  |──RoleSelection.jsx
+│   │   |   ├──Dashboard/
+│   │   |   |  |──AdminDashboard.jsx
+│   │   |   |  |──ProfessorDashboard.jsx
+│   │   |   |  |──StudentDashboard.jsx
+│   │   |   ├──ui/
+│   │   |   |  |──button.jsx 
+│   │   |   |  |──card.jsx 
+│   │   |   |  |──checkbox.jsx 
+│   │   |   |  |──form.jsx 
+│   │   |   |  |──input.jsx 
+│   │   |   |  |──label.jsx 
+│   │   ├── hooks/
+│   │   |   ├── use-toast.js               
+│   │   ├── lib/
+│   │   |   ├── schemas.js
+│   │   |   ├── utils.ts
+|   |   |── pages/
+|   |   |── App.css 
+│   │   ├── index.css       
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   ├── components.json
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package.json
+│   ├── postcss.config.cjs
+│   ├── README.md
+│   ├── tailwind.config.js
+│   ├── tsconfig.json
+│   └── vite.config.js 
+├── server/ 
+|   |── src/
+│   │   ├── controllers/
+│   │   |   ├── noticeController.js
+│   │   |   ├── userController.js
+│   │   ├── models/
+│   │   |   ├── Notice.js
+│   │   |   ├── User.js         
+│   │   ├── redux/
+│   │   |   ├── slices
+│   │   |   |   |── Notice.js
+│   │   |   |   |── User.js     
+│   │   |   ├── store.js   
+│   │   ├── routes/
+│   │   |   ├── noticeRoutes.js
+│   │   |   ├── userRoutes.js
+│   └── package.json
+│   ├── server.js
+├── README.md
+├── SETUP.md
+├── CONTRIBUTING.md            
+├── LICENSE               
+├── homepage.png               # Screenshot: Role Selection Page
+└── studentloginpage.png
