@@ -37,7 +37,7 @@ This project is currently under active development.
 
 ## Deployed URL (WORKING PROTOTYPE)
 
-* **Deployed URL:** `[https://department-hub.vercel.app/]`
+* **Deployed URL:** https://department-hub.vercel.app/
 
 ---
 
