@@ -2,6 +2,10 @@
 
 ## Prerequisites
 
+Ensure you have the following installed on your system:
+* [Node.js](https://nodejs.org/) (which includes npm)
+* [Git](https://git-scm.com/)
+
 # Steps
 1. Clone the repository:
 ```bash
